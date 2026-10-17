@@ -1,0 +1,15 @@
+# Secrets (none yet, but never commit them)
+.env
+.env.local
+.env.*
+
+# Python
+.venv/
+__pycache__/
+
+# Mac and editor clutter
+.DS_Store
+.vscode/
+
+# Netlify local folder
+.netlify/

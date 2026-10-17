@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brian Dolan</title>
+<meta name="description" content="Brian Dolan, product manager in New York. Healthcare products by day, AI tools for friends and family in my own time.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ECEDEA;          /* sidewalk concrete, light */
+    --surface: #F7F7F5;
+    --ink: #1E2124;
+    --ink-soft: #5C6166;
+    --rule: #C9CBC6;
+    --accent: #0A7D79;      /* the teal from your resume */
+    --sans: "Schibsted Grotesk", system-ui, sans-serif;
+    --serif: "Cormorant Garamond", Georgia, serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  a { color: var(--ink); text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  a:hover { color: var(--accent); }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+  /* ---------- intro ---------- */
+  header { padding: 72px 0 56px; }
+  .name {
+    font-size: clamp(44px, 8vw, 80px);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    line-height: .95;
+    margin: 0 0 22px;
+  }
+  .intro { max-width: 56ch; font-size: 19px; margin: 0 0 22px; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 0; padding: 0; list-style: none; font-weight: 500; }
+
+  h2 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--accent);
+    margin: 0 0 18px;
+    padding-top: 14px;
+    border-top: 2px solid var(--ink);
+  }
+
+  /* ---------- project cards ---------- */
+  .projects { display: grid; gap: 28px; margin-bottom: 72px; }
+
+  .project {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .cover {
+    position: relative;
+    min-height: 240px;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    overflow: hidden;
+  }
+  .about { padding: 26px 28px 24px; display: flex; flex-direction: column; }
+  .about h3 { font-size: 26px; font-weight: 800; letter-spacing: -.01em; margin: 0 0 6px; }
+  .what { margin: 0 0 14px; }
+  .learned { margin: 0 0 18px; color: var(--ink-soft); font-size: 15.5px; }
+  .learned b { color: var(--ink); font-weight: 700; }
+  .stack { font-size: 14px; color: var(--ink-soft); margin: 0 0 16px; }
+  .plinks { margin-top: auto; display: flex; gap: 20px; font-weight: 700; }
+
+  /* MyBlock cover: brick wall with the piece */
+  .cover.myblock {
+    background-color: #8F8F8B;
+    background-image:
+      linear-gradient(rgba(0,0,0,.12), rgba(0,0,0,.12)),
+      repeating-linear-gradient(0deg, #5E5E5A 0 2px, transparent 2px 26px),
+      repeating-linear-gradient(90deg, #5E5E5A 0 2px, transparent 2px 64px);
+  }
+  .cover.myblock svg { width: 100%; height: auto; display: block; }
+
+  /* Andiamo cover: a matchday ticket stub */
+  .cover.andiamo { background: #1F4E3D; }
+  .ticket {
+    position: relative;
+    width: min(100%, 320px);
+    background: #F3EBDD;
+    color: #1F4E3D;
+    border-radius: 6px;
+    padding: 18px 22px 18px 22px;
+    transform: rotate(-3deg);
+    box-shadow: 0 10px 20px -10px rgba(0,0,0,.6);
+    font-family: var(--serif);
+  }
+  .ticket::before, .ticket::after {
+    content: ""; position: absolute; top: 50%; width: 22px; height: 22px;
+    background: #1F4E3D; border-radius: 50%; transform: translateY(-50%);
+  }
+  .ticket::before { left: -11px; } .ticket::after { right: -11px; }
+  .ticket .t-label { font-family: var(--sans); font-size: 11px; font-weight: 700; letter-spacing: .06em; color: #8A6A3A; }
+  .ticket .t-title { font-size: 46px; font-style: italic; line-height: 1; margin: 4px 0 10px; }
+  .ticket .t-row {
+    display: flex; justify-content: space-between;
+    border-top: 2px dashed #B9AC93; padding-top: 10px;
+    font-family: var(--sans); font-size: 13px; font-weight: 500;
+  }
+
+  /* Scent Journal cover: an apothecary label */
+  .cover.scent { background: #D9D2C5; }
+  .label {
+    width: min(100%, 260px);
+    background: #FBF8F1;
+    border: 1px solid #6B5B45;
+    outline: 1px solid #6B5B45; outline-offset: -7px;
+    padding: 26px 22px;
+    text-align: center;
+    color: #4A3E2E;
+    font-family: var(--serif);
+    box-shadow: 0 8px 18px -10px rgba(60,40,20,.5);
+  }
+  .label .l-no { font-size: 15px; font-style: italic; }
+  .label .l-title { font-size: 36px; line-height: 1.05; margin: 6px 0; }
+  .label .l-sub { font-size: 16px; font-style: italic; border-top: 1px solid #B9AA90; padding-top: 8px; margin-top: 10px; }
+
+  /* ---------- how I work ---------- */
+  .how { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin: 0 0 72px; padding: 0; list-style: none; }
+  .how h3 { font-size: 18px; margin: 0 0 6px; }
+  .how p { margin: 0; color: var(--ink-soft); font-size: 15.5px; }
+
+  footer { border-top: 1px solid var(--rule); padding: 22px 0 40px; color: var(--ink-soft); font-size: 14px; }
+
+  @media (max-width: 720px) {
+    header { padding: 44px 0 36px; }
+    .project { grid-template-columns: 1fr; }
+    .cover { min-height: 190px; }
+    .how { grid-template-columns: 1fr; gap: 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1 class="name">Brian Dolan</h1>
+    <p class="intro">I'm a product manager in New York City. I've spent my career building products inside healthcare systems, most recently leading an Epic implementation at a cancer center. In my own time, I build AI tools and share them with friends and family who I think will get something out of them.</p>
+    <ul class="links">
+      <li><a href="https://linkedin.com/in/DolanBrian">LinkedIn</a></li>
+      <li><a href="https://github.com/Dolan-Brian">GitHub</a></li>
+      <li><a href="Brian_Dolan_Resume.pdf" download>Resume (PDF)</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <h2>Things I've built</h2>
+    <div class="projects">
+
+      <article class="project">
+        <div class="cover myblock" aria-hidden="true">
+<svg viewBox="-90 -318 1740 419" focusable="false">
+  
+  <defs>
+    <pattern id="dots" patternUnits="userSpaceOnUse" width="220" height="220">
+      <rect width="220" height="220" fill="#EE6A24"/>
+      <circle cx="179" cy="177" r="16" fill="#4C86FF"/><circle cx="111" cy="126" r="16" fill="#2F6BEA"/><circle cx="106" cy="131" r="20" fill="#2F6BEA"/><circle cx="99" cy="35" r="6" fill="#F89A3C"/><circle cx="133" cy="126" r="26" fill="#4C86FF"/><circle cx="139" cy="132" r="16" fill="#2F6BEA"/><circle cx="23" cy="115" r="20" fill="#2F6BEA"/><circle cx="46" cy="56" r="6" fill="#2F6BEA"/><circle cx="77" cy="127" r="16" fill="#2F6BEA"/><circle cx="62" cy="73" r="20" fill="#2F6BEA"/><circle cx="40" cy="136" r="26" fill="#4C86FF"/><circle cx="199" cy="171" r="20" fill="#1E4FC2"/><circle cx="161" cy="113" r="12" fill="#2F6BEA"/><circle cx="123" cy="28" r="6" fill="#2F6BEA"/><circle cx="88" cy="200" r="12" fill="#2F6BEA"/><circle cx="51" cy="193" r="9" fill="#4C86FF"/>
+    </pattern>
+    <g id="letters"><use href="#l0"/><use href="#l1"/><use href="#l2"/><use href="#l3"/><use href="#l4"/><use href="#l5"/><use href="#l6"/></g>
+    <path id="l0" d="M0.0 0.0H59.765625V-84.375C59.765625 -100.48828125 58.30078125 -136.669921875 57.71484375 -167.724609375C64.892578125 -135.64453125 73.828125 -101.513671875 79.1015625 -84.375L104.8828125 0.0H154.1015625L179.443359375 -84.375C184.86328125 -102.099609375 194.091796875 -138.134765625 201.123046875 -171.38671875C200.537109375 -139.599609375 198.92578125 -101.07421875 198.92578125 -84.375V0.0H258.69140625V-218.26171875H165.087890625L145.751953125 -150.0C141.2109375 -134.033203125 134.619140625 -100.48828125 129.4921875 -71.923828125C124.51171875 -100.48828125 117.626953125 -134.033203125 113.0859375 -150.0L93.45703125 -218.26171875H0.0Z" transform="rotate(-6 129.3 -109.1) translate(0 6)"/><path id="l1" d="M361.990234375 0.0H420.876953125V-75.87890625L499.83203125 -218.26171875H430.544921875L401.1015625 -152.34375C397.439453125 -144.287109375 394.509765625 -136.23046875 391.7265625 -127.1484375C388.650390625 -136.23046875 385.57421875 -144.287109375 381.765625 -152.34375L350.271484375 -218.26171875H280.69140625L361.990234375 -75.87890625Z" transform="rotate(5 390.3 -109.1) translate(0 -10)"/><path id="l2" d="M521.83203125 0.0H624.6640625C671.978515625 0.0 701.12890625 -25.927734375 701.12890625 -61.81640625C701.12890625 -92.578125 678.5703125 -112.646484375 650.4453125 -113.671875V-116.015625C675.787109375 -120.849609375 692.6328125 -139.599609375 692.6328125 -163.76953125C692.6328125 -196.875 666.265625 -218.26171875 616.4609375 -218.26171875H521.83203125ZM581.01171875 -47.16796875V-93.45703125H609.72265625C627.59375 -93.45703125 638.7265625 -84.814453125 638.7265625 -69.43359375C638.7265625 -54.931640625 628.619140625 -47.16796875 608.84375 -47.16796875ZM581.01171875 -130.078125V-171.6796875H606.20703125C620.85546875 -171.6796875 631.6953125 -164.208984375 631.6953125 -150.87890625C631.6953125 -137.40234375 620.85546875 -130.078125 605.328125 -130.078125Z" transform="rotate(-3 611.5 -109.1) translate(0 4)"/><path id="l3" d="M723.12890625 0.0H870.4921875V-47.75390625H782.30859375V-218.26171875H723.12890625Z" transform="rotate(6 796.8 -109.1) translate(0 -6)"/><path id="l4" d="M998.546875 2.9296875C1057.873046875 2.9296875 1104.6015625 -36.181640625 1104.6015625 -108.984375C1104.6015625 -181.93359375 1057.873046875 -221.19140625 998.546875 -221.19140625C938.927734375 -221.19140625 892.4921875 -181.93359375 892.4921875 -108.984375C892.4921875 -36.62109375 938.927734375 2.9296875 998.546875 2.9296875ZM998.546875 -48.6328125C969.25 -48.6328125 953.4296875 -69.873046875 953.4296875 -108.984375C953.4296875 -148.2421875 969.25 -169.62890625 998.546875 -169.62890625C1027.990234375 -169.62890625 1043.6640625 -148.2421875 1043.6640625 -108.984375C1043.6640625 -69.873046875 1027.990234375 -48.6328125 998.546875 -48.6328125Z" transform="rotate(-5 998.5 -109.1) translate(0 8)"/><path id="l5" d="M1231.77734375 2.9296875C1295.791015625 2.9296875 1328.1640625 -42.48046875 1331.09375 -79.6875H1271.03515625C1268.10546875 -61.083984375 1254.921875 -48.6328125 1233.2421875 -48.6328125C1204.23828125 -48.6328125 1187.5390625 -68.994140625 1187.5390625 -108.984375C1187.5390625 -147.0703125 1203.798828125 -169.62890625 1233.53515625 -169.62890625C1255.5078125 -169.62890625 1268.3984375 -157.177734375 1270.7421875 -138.57421875H1330.80078125C1325.380859375 -191.30859375 1286.123046875 -221.19140625 1231.77734375 -221.19140625C1173.037109375 -221.19140625 1126.6015625 -181.93359375 1126.6015625 -108.984375C1126.6015625 -36.474609375 1171.865234375 2.9296875 1231.77734375 2.9296875Z" transform="rotate(4 1228.8 -109.1) translate(0 -4)"/><path id="l6" d="M1353.09375 0.0H1412.2734375V-54.4921875L1439.2265625 -85.400390625L1490.349609375 0.0H1560.076171875L1479.65625 -124.365234375L1555.974609375 -218.26171875H1485.80859375L1442.44921875 -162.158203125C1427.947265625 -143.26171875 1418.865234375 -129.931640625 1411.248046875 -115.869140625L1412.2734375 -171.38671875V-218.26171875H1353.09375Z" transform="rotate(-7 1456.6 -109.1) translate(0 6)"/>
+  </defs>
+  <g fill="#5BB8F5" stroke="#1C1C1C" stroke-width="4"><circle cx="379" cy="-196" r="58"/><circle cx="256" cy="-204" r="58"/><circle cx="1415" cy="-43" r="74"/><circle cx="357" cy="-101" r="52"/><circle cx="282" cy="-195" r="50"/><circle cx="1430" cy="-37" r="76"/><circle cx="1237" cy="-176" r="54"/><circle cx="973" cy="-58" r="78"/><circle cx="1358" cy="-199" r="67"/><circle cx="1041" cy="-107" r="48"/><circle cx="740" cy="-199" r="82"/><circle cx="1336" cy="-98" r="54"/><circle cx="1402" cy="-93" r="80"/><circle cx="1309" cy="-107" r="59"/><circle cx="930" cy="-124" r="47"/><circle cx="484" cy="-40" r="42"/><circle cx="-30" cy="-168" r="10" fill="none" stroke="#1C1C1C" stroke-width="3"/><circle cx="1600" cy="-188" r="14" fill="none" stroke="#1C1C1C" stroke-width="3"/><circle cx="1620" cy="-79" r="9" fill="none" stroke="#1C1C1C" stroke-width="3"/><circle cx="780" cy="-258" r="8" fill="none" stroke="#1C1C1C" stroke-width="3"/></g>
+  <use href="#letters" transform="translate(14 18)" fill="#000" stroke="#000" stroke-width="58" stroke-linejoin="round"/>
+  <g><use href="#l0" fill="#000" stroke="#000" stroke-width="52" stroke-linejoin="round"/><use href="#l0" fill="#fff" stroke="#fff" stroke-width="38" stroke-linejoin="round"/><use href="#l0" fill="url(#dots)" stroke="url(#dots)" stroke-width="30" stroke-linejoin="round"/></g><g><use href="#l1" fill="#000" stroke="#000" stroke-width="52" stroke-linejoin="round"/><use href="#l1" fill="#fff" stroke="#fff" stroke-width="38" stroke-linejoin="round"/><use href="#l1" fill="url(#dots)" stroke="url(#dots)" stroke-width="30" stroke-linejoin="round"/></g><g><use href="#l2" fill="#000" stroke="#000" stroke-width="52" stroke-linejoin="round"/><use href="#l2" fill="#fff" stroke="#fff" stroke-width="38" stroke-linejoin="round"/><use href="#l2" fill="url(#dots)" stroke="url(#dots)" stroke-width="30" stroke-linejoin="round"/><ellipse cx="612.1" cy="-66.3" rx="42.9" ry="37.1" fill="url(#dots)" transform="rotate(-3 612.1 -66.3)"/><ellipse cx="612.1" cy="-66.3" rx="14" ry="25" fill="#000" stroke="#fff" stroke-width="5" transform="rotate(-3 612.1 -66.3)"/><ellipse cx="604.4" cy="-146.6" rx="39.3" ry="34.8" fill="url(#dots)" transform="rotate(-3 604.4 -146.6)"/><ellipse cx="604.4" cy="-146.6" rx="14" ry="25" fill="#000" stroke="#fff" stroke-width="5" transform="rotate(-3 604.4 -146.6)"/></g><g><use href="#l3" fill="#000" stroke="#000" stroke-width="52" stroke-linejoin="round"/><use href="#l3" fill="#fff" stroke="#fff" stroke-width="38" stroke-linejoin="round"/><use href="#l3" fill="url(#dots)" stroke="url(#dots)" stroke-width="30" stroke-linejoin="round"/></g><g><use href="#l4" fill="#000" stroke="#000" stroke-width="52" stroke-linejoin="round"/><use href="#l4" fill="#fff" stroke="#fff" stroke-width="38" stroke-linejoin="round"/><use href="#l4" fill="url(#dots)" stroke="url(#dots)" stroke-width="30" stroke-linejoin="round"/><ellipse cx="999.2" cy="-101.2" rx="59.1" ry="74.5" fill="url(#dots)" transform="rotate(-5 999.2 -101.2)"/><ellipse cx="999.2" cy="-101.2" rx="14" ry="25" fill="#000" stroke="#fff" stroke-width="5" transform="rotate(-5 999.2 -101.2)"/></g><g><use href="#l5" fill="#000" stroke="#000" stroke-width="52" stroke-linejoin="round"/><use href="#l5" fill="#fff" stroke="#fff" stroke-width="38" stroke-linejoin="round"/><use href="#l5" fill="url(#dots)" stroke="url(#dots)" stroke-width="30" stroke-linejoin="round"/></g><g><use href="#l6" fill="#000" stroke="#000" stroke-width="52" stroke-linejoin="round"/><use href="#l6" fill="#fff" stroke="#fff" stroke-width="38" stroke-linejoin="round"/><use href="#l6" fill="url(#dots)" stroke="url(#dots)" stroke-width="30" stroke-linejoin="round"/></g>
+</svg>
+        </div>
+        <div class="about">
+          <h3>MyBlock</h3>
+          <p class="what">An AI agent that answers questions about NYC neighborhoods using live city data. Nothing is scripted: for each question, the agent decides which of five NYC Open Data sources to check, in what order, and says so when the data can't answer it.</p>
+          <p class="learned"><b>What I learned:</b> writing down what a good answer looks like before testing. My first eval run caught the agent calling an area "quiet" when the data was simply missing.</p>
+          <p class="stack">Claude tool use, NYC Open Data, Netlify Functions</p>
+          <p class="plinks"><a href="https://myblocknyc.netlify.app">Try it</a><a href="https://github.com/Dolan-Brian/MyBlock">Code</a></p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="cover andiamo" aria-hidden="true">
+          <div class="ticket">
+            <div class="t-label">IL VIAGGIO</div>
+            <div class="t-title">Andiamo</div>
+            <div class="t-row"><span>Match day</span><span>Day 3 of 7</span></div>
+          </div>
+        </div>
+        <div class="about">
+          <h3>Andiamo</h3>
+          <p class="what">A trip planner for following a Serie A club. It pulls the club's real fixtures and builds a day-by-day itinerary around the matches.</p>
+          <p class="learned"><b>What I learned:</b> working within real limits. Long trips ran past the host's time limit, so I switched to a faster model and checked that the quality held up.</p>
+          <p class="stack">Claude API, football-data.org, Netlify Functions</p>
+          <p class="plinks"><a href="https://forza-andiamo.netlify.app">Try it</a><a href="https://github.com/Dolan-Brian/trip-brief">Code</a></p>
+        </div>
+      </article>
+
+      <article class="project">
+        <div class="cover scent" aria-hidden="true">
+          <div class="label">
+            <div class="l-no">No. 01</div>
+            <div class="l-title">Scent Journal</div>
+            <div class="l-sub">notes &amp; recommendations</div>
+          </div>
+        </div>
+        <div class="about">
+          <h3>Scent Journal</h3>
+          <p class="what">A place to log the fragrances you own and love, and get recommendations based on your taste. Each person's entries stay private to them.</p>
+          <p class="learned"><b>What I learned:</b> AI app builders are fast, but they need a close eye. I caught it quietly undoing a security fix, and now I check its changes myself.</p>
+          <p class="stack">Supabase, Claude API, Lovable</p>
+          <p class="plinks"><a href="https://scent-keeper-private.lovable.app">Try it</a><a href="https://github.com/Dolan-Brian/scent-journal">Code</a></p>
+        </div>
+      </article>
+
+    </div>
+
+    <h2>How I work</h2>
+    <ul class="how">
+      <li>
+        <h3>Decide what good looks like first</h3>
+        <p>Before I test something, I write down what a good result is. It keeps me honest about whether a change actually helped.</p>
+      </li>
+      <li>
+        <h3>Say what the data can't tell you</h3>
+        <p>I'd rather a tool say "I don't know" than guess. Missing data is not a finding, and an answer should say how fresh its sources are.</p>
+      </li>
+      <li>
+        <h3>Build for someone specific</h3>
+        <p>Most of what I build starts with a person I know and a question they keep asking. Seeing them use it is the real test.</p>
+      </li>
+    </ul>
+  </main>
+
+  <footer>Brian Dolan, Queens, NY</footer>
+</div>
+</body>
+</html>
