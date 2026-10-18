@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Brian Dolan</title>
-<meta name="description" content="Brian Dolan, product manager in New York. Healthcare products by day, AI tools for friends and family in my own time.">
+<meta name="description" content="Brian Dolan, healthcare product manager in New York City who builds and tests AI tools.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=Cormorant+Garamond:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
@@ -44,7 +44,9 @@
     line-height: .95;
     margin: 0 0 22px;
   }
-  .intro { max-width: 56ch; font-size: 19px; margin: 0 0 22px; }
+  .tagline { font-size: clamp(20px, 3vw, 26px); font-weight: 700; color: var(--accent); margin: -8px 0 18px; max-width: 30ch; line-height: 1.25; }
+  .intro { max-width: 56ch; font-size: 19px; margin: 0 0 14px; }
+  .intro + .links { margin-top: 22px; }
   .links { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 0; padding: 0; list-style: none; font-weight: 500; }
 
   h2 {
@@ -156,7 +158,9 @@
 
   <header>
     <h1 class="name">Brian Dolan</h1>
-    <p class="intro">I'm a product manager in New York City. I've spent my career building products inside healthcare systems, most recently leading an Epic implementation at a cancer center. In my own time, I build AI tools and share them with friends and family who I think will get something out of them.</p>
+    <p class="tagline">Healthcare product manager who builds and tests AI tools.</p>
+    <p class="intro">I've spent my career building products inside hospitals and health systems, most recently leading an Epic implementation at Memorial Sloan Kettering. In my own time, I build AI tools for friends and family, and I test them the way I'd test anything going in front of a clinician.</p>
+    <p class="intro">I'm always happy to talk about AI and healthcare products. <a href="mailto:DolanBrianP@gmail.com">Email me</a>.</p>
     <ul class="links">
       <li><a href="https://linkedin.com/in/DolanBrian">LinkedIn</a></li>
       <li><a href="https://github.com/Dolan-Brian">GitHub</a></li>
