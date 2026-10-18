@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Resume, Brian Dolan</title>
+<meta name="description" content="Resume of Brian Dolan, product manager in New York City with a career in healthcare products.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #ECEDEA;
+    --surface: #F7F7F5;
+    --ink: #1E2124;
+    --ink-soft: #5C6166;
+    --rule: #C9CBC6;
+    --accent: #0A7D79;
+    --sans: "Schibsted Grotesk", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16.5px; line-height: 1.55; }
+  a { color: var(--ink); text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+  a:hover { color: var(--accent); }
+  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+
+  .wrap { max-width: 820px; margin: 0 auto; padding: 0 20px; }
+
+  .topbar { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 22px 0; font-weight: 500; }
+  .btn {
+    display: inline-block; padding: 8px 14px; border: 2px solid var(--ink); border-radius: 4px;
+    text-decoration: none; font-weight: 700; font-size: 15px; background: var(--surface);
+  }
+  .btn:hover { background: var(--ink); color: var(--surface); }
+
+  .sheet { background: var(--surface); border: 1px solid var(--rule); border-radius: 4px; padding: 44px 48px 40px; margin-bottom: 48px; }
+
+  header h1 { font-size: clamp(36px, 6vw, 52px); font-weight: 800; letter-spacing: -.02em; line-height: 1; margin: 0 0 10px; }
+  .tagline { margin: 0 0 12px; font-weight: 500; color: var(--accent); }
+  .contact { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 0 0 26px; padding: 0; list-style: none; font-size: 15px; color: var(--ink-soft); }
+
+  .summary { margin: 0 0 8px; max-width: 70ch; }
+
+  h2 { font-size: 15px; font-weight: 700; color: var(--accent); margin: 34px 0 14px; padding-top: 12px; border-top: 2px solid var(--ink); }
+
+  .skills { display: grid; grid-template-columns: 220px 1fr; gap: 6px 20px; margin: 0; }
+  .skills dt { font-weight: 700; }
+  .skills dd { margin: 0; color: var(--ink-soft); }
+
+  .org { margin-bottom: 26px; }
+  .org-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .org-head h3 { font-size: 19px; font-weight: 800; margin: 0; }
+  .when { font-size: 14.5px; color: var(--ink-soft); white-space: nowrap; }
+  .where { color: var(--ink-soft); font-size: 15px; margin: 0 0 10px; }
+
+  .role { margin: 14px 0 0; }
+  .role-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+  .role-head h4 { font-size: 16.5px; font-weight: 700; margin: 0; }
+  .role p { margin: 4px 0 6px; }
+  .role ul { margin: 4px 0 0; padding-left: 20px; }
+  .role li { margin-bottom: 6px; }
+  .role li b { font-weight: 700; }
+
+  .edu { list-style: none; margin: 0; padding: 0; }
+  .edu li { margin-bottom: 8px; }
+  .edu span { color: var(--ink-soft); }
+
+  footer { text-align: center; color: var(--ink-soft); font-size: 14px; padding-bottom: 40px; }
+
+  @media (max-width: 640px) {
+    .sheet { padding: 28px 20px; }
+    .skills { grid-template-columns: 1fr; gap: 2px; }
+    .skills dd { margin-bottom: 10px; }
+  }
+
+  /* Printing gives a clean page with no site chrome */
+  @media print {
+    body { background: #fff; font-size: 11pt; }
+    .topbar, footer { display: none; }
+    .sheet { border: 0; padding: 0; margin: 0; background: #fff; }
+    a { text-decoration: none; }
+    .org { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav class="topbar" aria-label="Resume navigation">
+    <a href="/">Home</a>
+    <a class="btn" href="/Brian_Dolan_Resume.pdf" download>Download PDF</a>
+  </nav>
+
+  <main class="sheet">
+    <header>
+      <h1>Brian Dolan</h1>
+      <p class="tagline">Product Manager, Healthcare Product Strategist</p>
+      <ul class="contact">
+        <li>Queens, NY</li>
+        <li><a href="mailto:DolanBrianP@gmail.com">DolanBrianP@gmail.com</a></li>
+        <li><a href="https://linkedin.com/in/DolanBrian">LinkedIn</a></li>
+        <li><a href="https://github.com/Dolan-Brian">GitHub</a></li>
+      </ul>
+      <p class="summary">I've spent my career building products inside complex, high-stakes healthcare systems, working across clinicians, engineers, and operations leaders. As product lead for an enterprise Epic Genomics implementation, I took the module from requirements through go-live and calibrated clinical decision support alerts with the clinicians who use them. In my own time, I build AI tools and share them with friends and family who I think will get something out of them, most recently an agent that tells New Yorkers what's going on in their neighborhood. I test them the way I'd test anything going in front of a clinician, and seeing where they break is the part I enjoy most.</p>
+    </header>
+
+    <section aria-labelledby="skills">
+      <h2 id="skills">Skills</h2>
+      <dl class="skills">
+        <dt>Product &amp; Platform Delivery</dt>
+        <dd>Agile Methodologies, Certified SAFe, Jira, Confluence, Bitbucket</dd>
+        <dt>AI &amp; Development Tools</dt>
+        <dd>Anthropic API, Netlify, Python, GitHub, Supabase</dd>
+        <dt>Data, Analytics &amp; Interoperability</dt>
+        <dd>SQL, R, Tableau, FHIR, HL7, Epic EHR</dd>
+      </dl>
+    </section>
+
+    <section aria-labelledby="experience">
+      <h2 id="experience">Experience</h2>
+
+      <div class="org">
+        <div class="org-head"><h3>Memorial Sloan Kettering Cancer Center</h3><span class="when">April 2020 to present</span></div>
+        <p class="where">New York, NY</p>
+
+        <div class="role">
+          <div class="role-head"><h4>Product Manager II, Epic Implementation: Genomics</h4><span class="when">April 2023 to present</span></div>
+          <p>Product lead for the enterprise implementation of Epic's Genomics module, overseeing the transition from legacy systems to a modern integrated platform. Managed cross-functional planning, testing, training, and go-live across clinical, technical, and operational teams.</p>
+          <ul>
+            <li><b>Clinical &amp; Technical Alignment:</b> Partnered with geneticists, other clinicians, IT staff, and vendor consultants to design and customize workflows that aligned platform capabilities with complex institutional requirements. Delivered regular stakeholder updates and drove decisions across competing priorities.</li>
+            <li><b>Clinical Decision Support:</b> Calibrated medication and pharmacogenomic CDS alerts to avoid contributing to alert fatigue, including designing mockups and developing metrics to track their real-world use and efficacy.</li>
+            <li><b>User-Centered Product Iteration:</b> Built a continuous feedback loop with end users to identify post-launch pain points and adoption barriers. Prioritized and delivered enhancements with vendor and internal developers, tracking utilization metrics to ensure the platform evolved to meet emerging clinical needs.</li>
+            <li><b>Training &amp; Enablement:</b> Led adoption efforts for an enterprise platform rollout across multiple departments - developing customized training content, providing in-person at-the-elbow support at go-live, triaging user-reported issues, and continuing to monitor platform health through ongoing ticket resolution.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-head"><h4>Product Manager I, Research</h4><span class="when">April 2022 to April 2023</span></div>
+          <p>Directed product strategy and roadmap for a new digital data platform, leading cross-functional delivery across engineering, UX, and data architecture teams using Agile frameworks.</p>
+          <ul>
+            <li><b>Team &amp; Stakeholder Leadership:</b> Managed two junior PMs and collaborated with domestic and offshore teams to execute roadmap priorities. Launched a weekly PM newsletter that grew into a department-wide resource - standardizing how product managers and owners communicated priorities and decisions across the organization.</li>
+            <li><b>Product Discovery &amp; Market Research:</b> Evaluated digital patient engagement solutions to improve care compliance and access. Created RFPs and assessed in-house vs. external SaaS tools to inform short- and long-term platform strategy.</li>
+            <li><b>Product Sense:</b> Conducted competitive analyses and partnered with UX designers to develop wireframes and prototypes. Defined and monitored success metrics across three digital solutions spanning clinical, consumer, and engineering stakeholders.</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <div class="role-head"><h4>Business Intelligence Analyst II/I</h4><span class="when">April 2020 to April 2022</span></div>
+          <p>Owned and maintained consumer-facing data tools, partnering with cross-functional teams from initial requirements through go-live.</p>
+          <ul>
+            <li><b>Product Innovation:</b> Built and deployed a public-facing hereditary cancer risk algorithm, writing the decision-engine code, coordinating across Genetics, Engineering, Legal, and Design, and shipping under aggressive time and budget constraints.</li>
+            <li><b>Data-Driven Care Support:</b> Developed automated SQL-based workflows to monitor COVID-19 vaccination status and side effects across departments, enabling safer staffing decisions and replacing manual tracking processes.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="org">
+        <div class="org-head"><h3>Mount Sinai Health System</h3><span class="when">June 2018 to April 2020</span></div>
+        <p class="where">New York, NY</p>
+        <div class="role">
+          <div class="role-head"><h4>Senior Data Analyst, Quality Operations</h4></div>
+          <p>Managed analytics infrastructure and led key initiatives in visualization, platform administration, and team enablement across a growing analytics organization.</p>
+          <ul>
+            <li><b>Mentorship &amp; Enablement:</b> Onboarded and mentored new analysts, trained staff and leadership on best practices for version control, task tracking, and project documentation.</li>
+            <li><b>Platform &amp; Tool Administration:</b> Administered RStudio Server Pro, Jira, Bitbucket, and internal R packages for a growing analytics team, keeping tools current, documented, and consistently available across projects.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="org">
+        <div class="org-head"><h3>NYU Langone Medical Center</h3><span class="when">Dec 2014 to June 2018</span></div>
+        <p class="where">New York, NY</p>
+        <div class="role">
+          <div class="role-head"><h4>Data Analyst, Care Management</h4><span class="when">Feb 2017 to Mar 2018</span></div>
+          <div class="role-head"><h4>Improvement Analyst, Patient Experience</h4><span class="when">Dec 2014 to Feb 2017</span></div>
+          <p>Built and delivered operational tools and data products for a large health system, working across technical, business, and leadership stakeholders to identify problems and ship solutions.</p>
+          <ul>
+            <li><b>Operational Dashboard:</b> Designed and launched the organization's first insurance denial dashboard, automating a previously manual process to help the care management team identify and resolve access barriers for patients faster.</li>
+            <li><b>Executive Communication:</b> Presented client experience findings to senior leadership, translating complex data into clear recommendations that informed strategic decisions.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="org">
+        <div class="org-head"><h3>Catholic Health</h3><span class="when">Oct 2011 to Dec 2014</span></div>
+        <p class="where">Melville, NY</p>
+        <div class="role">
+          <div class="role-head"><h4>Performance Improvement Analyst</h4></div>
+          <p>Led data analysis for the Family Evaluation of Hospice Care program, using survey data to provide insights into family satisfaction. Built strong relationships with healthcare professionals to ensure timely completion of documentation, ranking #1 in team output.</p>
+        </div>
+      </div>
+
+      <div class="org">
+        <div class="org-head"><h3>Gyeongbuk Provincial Office of Education / EPIK</h3><span class="when">Aug 2010 to Aug 2011</span></div>
+        <p class="where">Gyeongju, South Korea</p>
+        <div class="role">
+          <div class="role-head"><h4>Native English Teacher</h4></div>
+          <p>Taught English to students and served as the faculty liaison for all English-related communication, developing a new grading system and curriculum as the first native English-speaking teacher at the school.</p>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="education">
+      <h2 id="education">Education &amp; Professional Development</h2>
+      <ul class="edu">
+        <li>Certified SAFe, Product Owner/Product Manager (POPM) <span>Scaled Agile, Inc., 2022</span></li>
+        <li>Data Science Certificate Program, Data Science with R: Machine Learning <span>NYC Data Science Academy, 2019</span></li>
+        <li>Master of Arts, Economics <span>The New School University, May 2014</span></li>
+        <li>Bachelor of Arts, Applied Mathematics <span>Queens College, The City University of New York, May 2010</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>Brian Dolan, Queens, NY</footer>
+</div>
+</body>
+</html>
